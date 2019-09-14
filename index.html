@@ -1,0 +1,43 @@
+<html>
+    <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <div class="container">
+        <div class="jumbotron">
+            <h3><center>ONLINE SCORE AND PREDICTIONS</center></h3>       
+        </div>
+        <div>
+            <form action="/users">
+                <center><input type="submit" class="btn btn-primary" value="CURRENT MATCHES"></input>
+                </center>
+                </form>
+            
+
+            
+                <form action="/completed">
+                    <center>
+                    <input type="submit" class="btn btn-primary" value="COMPLETE MATCHES"></input>
+                        </center>
+                </form>
+            
+    
+        <form action="/preview">
+            <center>
+            <input type="submit" class="btn btn-primary" value="NEXT MATCHES"></input>
+                </center>
+        </form>
+
+        <form action="/predictionresult" method="POST">
+            <center>
+                <input type="submit" class="btn btn-primary" value="PREDICTIONS RESULTS"></input>
+            </center>
+        </form>
+        </div>
+    </div>
+    </div>
+    </html>

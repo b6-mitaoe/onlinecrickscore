@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+      <head>
+
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript">
+            <!--
+            count=0
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+               
+            }
+         //-->
+      </script>
+        </head>
+    <body onload="JavaScript:AutoRefresh(6000);">
+        <div class="container">
+            <div class="jumbotron">
+        <center>
+    {% for i in result %}
+
+    {% for bat in i.batting.score %}
+  <h3> {{i.batting.team}}</h3>
+    
+    {% for ubat,ukey in bat.items() %}
+    {% if ubat!='inning_num' and ubat!='declare' %}
+<h4><b>
+{{ubat}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ukey}}</b></h4>
+{% endif %}    
+{%endfor%}
+    {% endfor %}
+
+    {% for bat in i.bowling.score %}
+    <h3> {{i.bowling.team}}</h3>
+
+    {% for ubat,ukey in bat.items() %}
+    {% if ubat!='inning_num' and ubat!='declare' %}
+    <h4><b>
+         {{ubat}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ukey}}</b></h4>
+    {%endif%}
+    {%endfor%}
+    {% endfor %}
+    
+    
+    
+    {% endfor %}
+
+
+
+    </center>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>
